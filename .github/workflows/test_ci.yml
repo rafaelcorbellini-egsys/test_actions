@@ -22,6 +22,7 @@ jobs:
       - name: Increment Version
         run: |
           echo ${{ github }} 
+          echo ${{ github.REF }}
           
       - name: Increment Version
         run: |
