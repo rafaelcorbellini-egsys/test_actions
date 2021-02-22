@@ -20,14 +20,7 @@ jobs:
           ref: ${{ github.REF }}
           fetch-depth: 0
       
-
-      - name: Increment Version
+      - name: Increment Version      
         if: ${{ github.event.pull_request.merged == true}}
         run: |
-          echo ${{ github }} 
-          echo ${{ github.REF }}
-          echo ${{ github.event.after }}
-          
-      - name: Increment Version
-        run: |
-          ./version_manager.py sc alpha fix
+          ./version_manager.py ${{ github.BASE_REF }} ${{ github.BASE_REF }}
