@@ -23,6 +23,7 @@ jobs:
         run: |
           echo ${{ github }} 
           echo ${{ github.REF }}
+          echo ${{ github.event.after }}
           
       - name: Increment Version
         run: |
