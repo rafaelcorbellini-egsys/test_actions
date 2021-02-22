@@ -1,0 +1,35 @@
+client:
+  sc:
+    alpha:
+      #incrementado dentro do ambiente
+      sufix: 0
+      #incrementado SEMPRE
+      vcode: 330540
+      #incrementado logo apos inciar processo de publicar
+      #sendo ele dev->alpha ou  main->main
+      vname: 35.4.0
+    rc:
+      sufix: 0
+      vname: 330040
+      vcode: 35.0.0
+    main:
+      sufix: 0
+      vname: 330000
+      vcode: 30.0.0
+  pr:
+    alpha:
+      #incrementado dentro do ambiente
+      sufix: 0
+      #incrementado SEMPRE
+      vcode: 330540
+      #incrementado logo apos inciar processo de publicar
+      #sendo ele dev->alpha ou  main->main
+      vname: 35.4.0
+    rc:
+      sufix: 0
+      vname: 330040
+      vcode: 35.0.0
+    main:
+      sufix: 0
+      vname: 330000
+      vcode: 30.0.0
