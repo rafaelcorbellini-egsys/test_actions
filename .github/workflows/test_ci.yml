@@ -1,0 +1,28 @@
+name: CI/CD Alpha Env
+
+on:
+  push:
+  # and the target with some regex to match our specific  branch names
+    branches:
+      - alpha*
+
+jobs:
+  publish:
+
+    runs-on: [self-hosted, linux, mobile]
+    steps:
+      #======CONFIGURACOES DO ACTIONS======#
+      #Fazendo o clone da branch
+      - name: 'Checkout repository on branch: ${{ github.REF }}'
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.REF }}
+          fetch-depth: 0
+          
+       - name: Increment Version
+        run: |
+          echo ${{ github }} 
+          
+      - name: Increment Version
+        run: |
+          ./version_manager.py sc alpha fix
