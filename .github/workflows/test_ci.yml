@@ -9,7 +9,7 @@ on:
 jobs:
   publish:
 
-    runs-on: [self-hosted, linux, mobile]
+    runs-on: ubuntu-latest
     steps:
       #======CONFIGURACOES DO ACTIONS======#
       #Fazendo o clone da branch
