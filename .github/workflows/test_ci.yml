@@ -1,16 +1,17 @@
 name: CI/CD Alpha Env
 
 on:
-  push:
-  # and the target with some regex to match our specific  branch names
+  pull_request:
+    types: [closed]
     branches:
-      - alpha*
+      - alpha
 
 jobs:
   publish:
 
     runs-on: ubuntu-latest
     steps:
+    
       #======CONFIGURACOES DO ACTIONS======#
       #Fazendo o clone da branch
       - name: 'Checkout repository on branch: ${{ github.REF }}'
@@ -18,8 +19,10 @@ jobs:
         with:
           ref: ${{ github.REF }}
           fetch-depth: 0
-          
+      
+
       - name: Increment Version
+        if: ${{ github.event.pull_request.merged == true}}
         run: |
           echo ${{ github }} 
           echo ${{ github.REF }}
