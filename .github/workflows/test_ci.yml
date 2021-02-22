@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.REF }}
           fetch-depth: 0
           
-       - name: Increment Version
+      - name: Increment Version
         run: |
           echo ${{ github }} 
           
