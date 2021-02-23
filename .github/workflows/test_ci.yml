@@ -23,4 +23,5 @@ jobs:
       - name: Increment Version      
         if: ${{ github.event.pull_request.merged == true}}
         run: |
+          cd ./scripts
           ./version_manager.py ${{ github.BASE_REF }} ${{ github.BASE_REF }}
