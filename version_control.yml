@@ -1,5 +1,5 @@
 client:
-  sc:
+  pmsc:
     alpha:
       #incrementado dentro do ambiente
       sufix: 0
